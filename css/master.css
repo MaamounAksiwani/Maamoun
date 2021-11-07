@@ -37,12 +37,14 @@ a {
 .Main-Title {
     padding: 5px 20px;
     text-align: center;
-    margin: 100px auto;
+    text-transform: uppercase;
+    margin: 70px auto;
     font-size: 25px;
     border: 1px solid #000;
     width: fit-content;
     position: relative;
     z-index: 100;
+    top: 50px;
     cursor: pointer;
 }
 
@@ -128,7 +130,7 @@ a {
 .header {
     position: relative;
     padding: 15px 0px;
-    background-color: #fff;
+    background-color: #ececec;
     box-shadow: 0 0 10px #ddd;
 }
 
@@ -417,7 +419,6 @@ a {
 
 .articles .content p {
     color: #666;
-    height: 90px;
 }
 
 .articles .box img {
@@ -447,6 +448,288 @@ a {
 
 
 /* End articles */
+
+
+/* Start GALLERY*/
+
+.gallery {
+    padding-bottom: var(--main-padding-bottom);
+    background-color: #ececec;
+}
+
+.gallery .gallery-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 200px;
+}
+
+.gallery .gallery-box .box {
+    border: 15px solid #fff;
+    transition: var(--main-transition);
+    overflow: hidden;
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+
+.gallery .gallery-box .box:hover img {
+    opacity: 0.4;
+    /* -ms-transform: skewY(20deg);
+    transform: skewY(20deg);
+    -webkit-transform: skewY(20deg);
+    -moz-transform: skewY(20deg);
+    -o-transform: skewY(20deg); */
+}
+
+.gallery .gallery-box img {
+    width: 100%;
+    max-width: 100%;
+}
+
+
+/*End GALLERY*/
+
+
+/* StartTime line */
+
+.timeline {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.timeline .timeline_contect {
+    position: relative;
+    overflow: hidden;
+}
+
+.timeline .timeline_contect:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    background-color: var(--main-color);
+    margin-left: -1px;
+    width: 2px;
+    height: 100%;
+}
+
+.timeline .timeline_contect .year {
+    margin: 20px auto;
+    width: 50px;
+    color: #fff;
+    position: relative;
+    background-color: var(--main-color);
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.timeline .timeline_contect .left,
+.timeline .timeline_contect .right {
+    position: relative;
+    width: calc(50% - 25px);
+    margin-bottom: 25px;
+}
+
+.timeline .timeline_contect .left {
+    float: left;
+}
+
+.timeline .timeline_contect .right {
+    float: right;
+}
+
+.timeline .timeline_contect .content {
+    background-color: #FFF;
+    padding: 20px;
+}
+
+.timeline .timeline_contect .content h3 {
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+.timeline .timeline_contect .content p {
+    line-height: 1.6;
+    color: #777;
+}
+
+.timeline .timeline_contect .left::before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: -36px;
+    border: 3px solid var(--main-color);
+    ;
+    top: 20px;
+}
+
+.timeline .timeline_contect .right::before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    left: -36px;
+    border: 3px solid var(--main-color);
+    top: 20px;
+}
+
+.clearboth {
+    clear: both;
+}
+
+.timeline .timeline_contect .left .content::before {
+    content: '';
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent #FFF;
+    right: -20px;
+    position: absolute;
+    top: 20px;
+}
+
+.timeline .timeline_contect .right .content::before {
+    content: '';
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #FFF transparent transparent;
+    left: -20px;
+    position: absolute;
+}
+
+
+/* End Time Line */
+
+
+/* Start features */
+
+.features {
+    padding-bottom: var(--main-padding-bottom);
+}
+
+.features-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.features .features-box .box {
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.features .features-box .content {
+    padding: 15px;
+}
+
+.features .features-box .content h2 {
+    font-weight: bold;
+    position: relative;
+    font-size: 35px;
+}
+
+.features .features-box .content h2::after {
+    content: "";
+    width: 100px;
+    position: absolute;
+    height: 3px;
+    background-color: var(--main-color);
+    right: 35%;
+    transform: translateY(-35%);
+    bottom: 0;
+    -webkit-transform: translateY(-35%);
+    -moz-transform: translateY(-35%);
+    -ms-transform: translateY(-35%);
+    -o-transform: translateY(-35%);
+}
+
+.features .features-box .content p {
+    color: #666;
+}
+
+.features .features-box .content button {
+    padding: 10px 20px;
+    position: relative;
+    border: 2px solid var(--main-color);
+    border-radius: 3px;
+    color: var(--main-color);
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #Fff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.features .features-box .box:hover button {}
+
+.features .features-box .content button::before {
+    content: "";
+    position: absolute;
+}
+
+.features .features-box .img-overlay {
+    position: relative;
+    overflow: hidden;
+}
+
+.features .features-box .img-overlay::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    background-color: #2196f380;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+
+/* .features .features-box .img-overlay::before {
+    content: "";
+    position: absolute;
+    transition: var(--main-transition);
+    bottom: 0;
+    right: 0;
+    border-style: solid;
+    border-width: 0px 0px 150px 500px;
+    border-color: transparent transparent #fff transparent;
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+} */
+
+.features .features-box .img-overlay::after {
+    content: "";
+    position: absolute;
+    transition: var(--main-transition);
+    bottom: 0;
+    right: 0;
+    border-style: solid;
+    border-width: 0px 0px 150px 500px;
+    border-color: transparent transparent #fff transparent;
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+
+.features .features-box .img-overlay img {
+    width: 100%;
+    max-width: 100%;
+}
+
+
+/*End features*/
 
 
 /*Start animation*/
